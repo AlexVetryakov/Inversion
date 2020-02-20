@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="DependensyInd" customModuleProvider="target">
             <connections>
-                <outlet property="locationButton" destination="014-IR-gST" id="JU0-Ao-RyV"/>
                 <outlet property="locationLabel" destination="Gyd-qi-kjG" id="4Eb-nb-bLf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,24 +19,42 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknown location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyd-qi-kjG">
-                    <rect key="frame" x="139" y="437.5" width="136.5" height="21"/>
+                    <rect key="frame" x="139" y="337.5" width="136.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="014-IR-gST">
-                    <rect key="frame" x="163" y="508.5" width="88" height="30"/>
+                    <rect key="frame" x="163" y="408.5" width="88" height="30"/>
                     <state key="normal" title="Get Location"/>
                     <connections>
                         <action selector="updateLocationWithSender:" destination="-1" eventType="touchUpInside" id="ouL-lr-hho"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWr-qk-qVU">
+                    <rect key="frame" x="127" y="468.5" width="160" height="30"/>
+                    <state key="normal" title="Get location From Func"/>
+                    <connections>
+                        <action selector="updateLocationFromFuncWithSender:" destination="-1" eventType="touchUpInside" id="R0c-OB-Gpr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoB-6U-d5A">
+                    <rect key="frame" x="112" y="528.5" width="190" height="30"/>
+                    <state key="normal" title="Get Location From Property"/>
+                    <connections>
+                        <action selector="updateLocationFromPropertyWithSender:" destination="-1" eventType="touchUpInside" id="1cf-HS-8ES"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="WWr-qk-qVU" firstAttribute="top" secondItem="014-IR-gST" secondAttribute="bottom" constant="30" id="0FH-AX-iMM"/>
+                <constraint firstItem="FoB-6U-d5A" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="A1b-ly-1RP"/>
+                <constraint firstItem="WWr-qk-qVU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wwx-9M-xtu"/>
+                <constraint firstItem="FoB-6U-d5A" firstAttribute="top" secondItem="WWr-qk-qVU" secondAttribute="bottom" constant="30" id="Yg2-yh-YIV"/>
                 <constraint firstItem="014-IR-gST" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dA7-mF-S1B"/>
                 <constraint firstItem="014-IR-gST" firstAttribute="top" secondItem="Gyd-qi-kjG" secondAttribute="bottom" constant="50" id="isO-WB-puH"/>
-                <constraint firstItem="Gyd-qi-kjG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="oh9-Sq-Ja8"/>
+                <constraint firstItem="Gyd-qi-kjG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="oh9-Sq-Ja8"/>
                 <constraint firstItem="Gyd-qi-kjG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yTG-sy-SsK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
