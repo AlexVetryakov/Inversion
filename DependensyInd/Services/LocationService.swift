@@ -8,15 +8,16 @@
 
 import Foundation
 
-class LocationService {
+final class LocationService {
 
-    let locations = ["Dnipro", "Kyev", "Kharkiv", "Rovno", "Lviv"]
+    fileprivate let locations = ["Dnipro", "Kyev", "Kharkiv", "Rovno", "Lviv"]
+}
+
+extension LocationService: Locationable {
 
     func getLocation() -> String {
-
         let result = locations.randomElement()
 
         return result ?? "Unknown lacation"
     }
-
 }

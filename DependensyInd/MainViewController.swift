@@ -12,13 +12,12 @@ final class MainViewController: UIViewController {
 
     @IBOutlet weak private var locationLabel: UILabel!
 
-    private var locationService: LocationService?
-    private var locationServiceFromFunction: LocationService?
-    var locationServiceFromProperty: LocationService?
+    private var locationService: Locationable?
+    private var locationServiceFromFunction: Locationable?
+    var locationServiceFromProperty: Locationable?
 
-    init(locationService: LocationService) {
+    init(locationService: Locationable) {
         self.locationService = locationService
-
 
         super.init(nibName: String(describing: MainViewController.self), bundle: nil)
     }
@@ -27,9 +26,10 @@ final class MainViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func addLocationService(locationService: LocationService) {
+    func addLocationService(locationService: Locationable) {
         locationServiceFromFunction = locationService
     }
+
 
     @IBAction private func updateLocation(sender: UIButton) {
         locationLabel.text = locationService?.getLocation()
