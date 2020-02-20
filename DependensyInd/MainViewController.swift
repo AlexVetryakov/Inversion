@@ -13,15 +13,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak private var locationLabel: UILabel!
     @IBOutlet weak private var locationButton: UIButton!
 
-    let locationService = LocationService()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
     @IBAction func updateLocation(sender: UIButton) {
-        locationLabel.text = locationService.getLocation()
+        locationLabel.text = LocationService.shared.getLocation()
     }
 
 }

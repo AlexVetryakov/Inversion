@@ -8,9 +8,13 @@
 
 import Foundation
 
-class LocationService {
+final class LocationService {
 
-    let locations = ["Dnipro", "Kyev", "Kharkiv", "Rovno", "Lviv"]
+    static let shared = LocationService()
+
+    var locations = ["Dnipro", "Kyev", "Kharkiv", "Rovno", "Lviv"]
+
+    private init() { }
 
     func getLocation() -> String {
 
